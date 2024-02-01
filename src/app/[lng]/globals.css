@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --dark-grey-text: #343A40;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #ced4da;
+}
+
+.gear1, .gear2, .gear3 {
+  color: var(--dark-grey-text);
+  display: block;
+  float: left;
+  position: absolute;
+}
+          
+.gear1 {
+  top: 110px;
+  left: 154px;
+}
+          
+.gear2 {
+  bottom: 65px;
+  left: 60px;
+}
+
+.gear3 {
+  top: 31px;
+  left: 90px;
+}
+
+.spin {
+  -webkit-animation:spin 6s linear infinite;
+  -moz-animation:spin 6s linear infinite;
+  animation:spin 6s linear infinite;
+}
+
+.spin-back {
+  -webkit-animation:spin-back 6s linear infinite;
+  -moz-animation:spin-back 6s linear infinite;
+  animation:spin-back 6s linear infinite;
+}
+
+/* section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes spin-back { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin-back { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin-back { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
