@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "accept-language": "^3.0.18",
     "gsap": "^3.12.5",
     "i18next": "^23.7.20",

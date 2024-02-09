@@ -10,10 +10,10 @@ export const Hero = ({ lng }: Props): JSX.Element => {
   const { t } = useTranslation(lng, "hero");
 
   return (
-    <section className="flex justify-between">
+    <section className="flex justify-between h-screen sect">
       <div className="bg"></div>
       <Gears />
-      <h1 className="text-[#bb0a21] text-5xl text-center pt-[100px] pl-5 font-bold block w-1/2">
+      <h1 className="text-[#fca311] text-5xl text-center p-3  pl-5 font-bold block w-2/3 h-[350px] flex justify-center items-center absolute shadow position bg-zinc-400/50">
         {t("title")}
       </h1>
       <Gears />

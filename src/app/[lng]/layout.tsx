@@ -3,7 +3,8 @@ import { dir } from "i18next";
 
 import { languages } from "../i18n/settings";
 
-import { Header } from "../sections/Header";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 import { montserrat } from "@/utils/fonts";
 import "./globals.css";
@@ -29,6 +30,7 @@ export default function RootLayout({ children, params: { lng } }: Props) {
       <body className={`${montserrat.className}`}>
         <Header lng={lng} />
         {children}
+        <Footer lng={lng} />
       </body>
     </html>
   );

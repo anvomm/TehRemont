@@ -8,11 +8,11 @@ export const GearIcon: React.FC<Props> = ({ classNames }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="#000"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="currentColor"
-      className={`w-32 h-32 ${classNames}`}
+      stroke="#fca311"
+      className={`w-32 h-32 z-10 ${classNames}`}
     >
       <path
         strokeLinecap="round"

@@ -7,16 +7,23 @@ import { ScrollTrigger } from "gsap/all";
 
 import { Hero } from "../sections/Hero";
 import { SecondSection } from "../sections/SecondSection";
+import { ThirdSection } from "../sections/ThirdSection";
+import { FourthSection } from "../sections/FourthSection";
+import { FithSection } from "../sections/FithSection";
 
-import { useTranslation } from "../i18n/client";
+import bg1 from "../../assets/images/bg/bg-1.jpg";
+import bg2 from "../../assets/images/bg/bg-2.jpg";
+import bg3 from "../../assets/images/bg/bg-3.jpg";
+import bg4 from "../../assets/images/bg/bg-4.jpg";
+import bg5 from "../../assets/images/bg/bg-5.jpg";
 
 interface Props {
   params: { lng: string };
 }
 
-export default function Home({ params: { lng } }: Props) {
-  const { t } = useTranslation(lng, "secondSection");
+const backgrounds = [bg1, bg2, bg3, bg4, bg5];
 
+export default function Home({ params: { lng } }: Props) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +45,8 @@ export default function Home({ params: { lng } }: Props) {
         // Check if 'section.bg' exists before proceeding
         if (section && section.bg) {
           // Give the backgrounds some random images
-          section.bg.style.backgroundImage = `url(../../assets/images/bg/bg-${i})`;
+          const bgImage = backgrounds[i];
+          section.bg.style.backgroundImage = `url(${bgImage.src})`;
 
           // the first image (i === 0) should be handled differently because it should start at the very top.
           // use function-based values in order to keep things responsive
@@ -69,15 +77,12 @@ export default function Home({ params: { lng } }: Props) {
   }, []);
 
   return (
-    <main className="px-5">
+    <main>
       <Hero lng={lng} />
       <SecondSection lng={lng} />
-      <section className="flex justify-center items-center px-10 sect">
-        <div className="bg"></div>
-        <p className="text-[#bb0a21] text-2xl text-center font-bold">
-          {t("text")}
-        </p>
-      </section>
+      <ThirdSection lng={lng} />
+      <FourthSection lng={lng} />
+      <FithSection lng={lng} />
     </main>
   );
 }

@@ -1,7 +1,8 @@
 {
-    "languages": {
-      "est": "Estonian",
-      "en": "English",
-      "ru": "Russian"
-    }
-  }
+  "languages": {
+    "est": "Estonian",
+    "en": "English",
+    "ru": "Russian"
+  },
+  "contacts": "Contacts"
+}
