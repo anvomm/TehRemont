@@ -22,8 +22,11 @@ export const Footer = ({ lng }: Props): JSX.Element => {
   }, []);
 
   return (
-    <footer id="contacts" className="bg-zinc-600 pt-[60px] px-8 pb-5">
-      <p className="text-center w-1/2 mx-auto mb-11">
+    <footer
+      id="contacts"
+      className="bg-zinc-600 pt-10 md:pt-[50px] lg:pt-[60px] px-3 md:px-5 lg:px-8 pb-5"
+    >
+      <p className="text-xs sm:text-sm lg:text-base text-center xl:w-1/2 mx-auto mb-11">
         {t("deal-part1")}:{" "}
         <Link
           className="text-[#040f36] font-semibold"
@@ -39,11 +42,11 @@ export const Footer = ({ lng }: Props): JSX.Element => {
           avtootmine@gmail.com
         </Link>
       </p>
-      <div className="flex justify-between">
+      <div className="flex flex-col items-center  md:flex-row md:justify-between">
         <ContactForm lng={lng} />
-        <div className="w-1/3">
+        <div className="md:w-1/3 text-xs sm:text-sm lg:text-base">
           <p className="mb-5">{t("contact-text")}: </p>
-          <div className="w-full pl-4 flex flex-col gap-3">
+          <div className="w-full md:pl-4 flex flex-col items-center gap-3">
             <p>Komposti, Rohuneeme küla,</p>
             <p> Viimsi vald, Harjumaa, Eesti.</p>
             <Link
@@ -51,12 +54,12 @@ export const Footer = ({ lng }: Props): JSX.Element => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LocationIcon classNames="w-[180px] h-[180px] mt-7 cursor-pointer" />
+              <LocationIcon classNames="w-[100px] sm:w-[140px] lg:w-[180px] h-[100px] sm:h-[140px] lg:h-[180px] mt-7 cursor-pointer" />
             </Link>
           </div>
         </div>
       </div>
-      <p className="text-center mt-14 text-sm">
+      <p className="text-center mt-14 text-[10px] sm:text-xs lg:text-sm">
         © <span id="current-year"></span> TehRemont. All rights reserved.
       </p>
     </footer>
