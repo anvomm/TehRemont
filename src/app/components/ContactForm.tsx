@@ -32,7 +32,6 @@ export const ContactForm = ({ lng }: Props): JSX.Element => {
     if (event.target.files !== null) {
       const fileUploaded = event.target.files[0];
       setPicture(fileUploaded.name);
-      console.log(fileUploaded.name);
     }
   };
 
