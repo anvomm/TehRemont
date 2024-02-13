@@ -39,7 +39,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
           className="text-[#040f36] font-semibold"
           href={"mailto: avtootmine@gmail.com"}
         >
-          avtootmine@gmail.com
+          info@tehremont.eu
         </Link>
       </p>
       <div className="flex flex-col items-center  md:flex-row md:justify-between">
