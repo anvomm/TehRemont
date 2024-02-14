@@ -18,18 +18,27 @@ const metadataEst: Metadata = {
   title: "TehRemont - sinu abi remondis",
   description:
     "Tehremont.eu erialad: erikeevitus, treimis- ja freesimistööd, erinevate metallide ja plastide töötlus, tehnika hooldus ja remont platsil ja väljasõidul.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const metadataEn: Metadata = {
   title: "TehRemont - your assistant repair",
   description:
     "Tehremont.eu deals with spec.welding processes, material machining processes, processing different types of metals and plastics, different machinery service and repair.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const metadataRu: Metadata = {
   title: "TehRemont - твой помощник в ремонте",
   description:
     "Tehremont.eu производит работы по спец.сварке, токарному и фрезерному делу, обработке различных металлов и пластиков, ремонту и обслуживанию различной техники.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export async function generateMetadata({ params }: Props) {
