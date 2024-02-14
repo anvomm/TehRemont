@@ -50,7 +50,7 @@ export const ContactForm = ({ lng }: Props): JSX.Element => {
       <label className="flex flex-col gap-1 text-[#1f135e] font-medium text-xs sm:text-sm lg:text-base">
         {t("email")}:
         <input
-          className="bg-zinc-500 text-[#0a0a0a] rounded h-8 md:h-10 pl-3 outline-none"
+          className="bg-zinc-300 text-[#0a0a0a] rounded h-8 md:h-10 pl-3 outline-none"
           id="email"
           type="email"
           name="email"
@@ -60,7 +60,7 @@ export const ContactForm = ({ lng }: Props): JSX.Element => {
       <label className="flex flex-col gap-1 text-[#1f135e] font-medium text-xs sm:text-sm lg:text-base">
         {t("message")}:
         <textarea
-          className="bg-zinc-500 rounded text-[#0a0a0a] h-20 pl-3 pt-3 outline-none"
+          className="bg-zinc-300 rounded text-[#0a0a0a] h-20 pl-3 pt-3 outline-none"
           id="message"
           name="message"
         />
@@ -93,7 +93,7 @@ export const ContactForm = ({ lng }: Props): JSX.Element => {
         accept="image/png, image/jpeg"
       /> */}
       <button
-        className="mt-8 py-3 rounded-md bg-[#061069] text-zinc-400 font-medium text-xs sm:text-sm lg:text-base w-[100px] md:w-[110px] lg:w-[120px] self-center flex justify-center items-center"
+        className="mt-8 py-3 rounded-md bg-[#061069] text-zinc-300 font-medium text-xs sm:text-sm lg:text-base w-[100px] md:w-[110px] lg:w-[120px] self-center flex justify-center items-center"
         type="submit"
         disabled={state.submitting}
       >

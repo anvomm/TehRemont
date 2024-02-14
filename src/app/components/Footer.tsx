@@ -24,7 +24,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
   return (
     <footer
       id="contacts"
-      className="bg-zinc-600 pt-10 md:pt-[50px] lg:pt-[60px] px-3 md:px-5 lg:px-8 pb-5"
+      className="bg-zinc-400 pt-10 md:pt-[50px] lg:pt-[60px] px-3 md:px-5 lg:px-8 pb-5"
     >
       <p className="text-xs sm:text-sm lg:text-base text-center xl:w-1/2 mx-auto mb-11">
         {t("deal-part1")}:{" "}
