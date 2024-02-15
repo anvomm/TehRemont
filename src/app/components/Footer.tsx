@@ -37,7 +37,7 @@ export const Footer = ({ lng }: Props): JSX.Element => {
         {t("deal-part2")}:{" "}
         <Link
           className="text-[#040f36] font-semibold"
-          href={"mailto: avtootmine@gmail.com"}
+          href={"mailto: info@tehremont.eu"}
         >
           info@tehremont.eu
         </Link>

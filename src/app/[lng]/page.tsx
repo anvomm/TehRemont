@@ -27,29 +27,21 @@ export default function Home({ params: { lng } }: Props) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Define a type for your section element
     type SectionElement = HTMLElement & {
       bg: HTMLElement | null;
     };
 
-    // Function to get the ratio
     const getRatio = (el: SectionElement) =>
       window.innerHeight / (window.innerHeight + el.offsetHeight);
 
-    // Iterate through sections
     gsap.utils.toArray<SectionElement>(".sect").forEach((section, i) => {
-      // Check if 'section' exists before proceeding
       if (section) {
         section!.bg = section!.querySelector<HTMLElement>(".bg");
 
-        // Check if 'section.bg' exists before proceeding
         if (section && section.bg) {
-          // Give the backgrounds some random images
           const bgImage = backgrounds[i];
           section.bg.style.backgroundImage = `url(${bgImage.src})`;
 
-          // the first image (i === 0) should be handled differently because it should start at the very top.
-          // use function-based values in order to keep things responsive
           gsap.fromTo(
             section.bg,
             {
@@ -67,7 +59,7 @@ export default function Home({ params: { lng } }: Props) {
                 start: () => (i ? "top bottom" : "top top"),
                 end: "bottom top",
                 scrub: true,
-                invalidateOnRefresh: true, // to make it responsive
+                invalidateOnRefresh: true,
               },
             }
           );
